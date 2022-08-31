@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "potatobread:starch"
+		},
+		{
+			"item": "potatobread:starch"
+		},
+		{
+			"item": "potatobread:starch"
+		},
+		{
+			"item": "minecraft:water_bucket"
+		}
+	],
+	"result": {
+		"item": "potatobread:dough",
+		"count": 4
+	}
+}
