@@ -25,21 +25,23 @@ public class PotatoModRegistry {
     }
   };
   //
-  public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin", () -> new ItemRollingpin(new Item.Properties()));
   public static final RegistryObject<Item> PEELED = ITEMS.register("potato_peeled", () -> new ItemRaw(new Item.Properties()));
   public static final RegistryObject<Item> STARCH = ITEMS.register("starch", () -> new ItemRaw(new Item.Properties()));
+  public static final RegistryObject<Item> icing = ITEMS.register("icing", () -> new ItemRaw(new Item.Properties()));
   public static final RegistryObject<Item> DOUGH = ITEMS.register("dough", () -> new ItemRaw(new Item.Properties()));
+  public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin", () -> new ItemCraftTool(new Item.Properties()));
+  public static final RegistryObject<Item> pastry_knife = ITEMS.register("pastry_knife", () -> new ItemCraftTool(new Item.Properties()));
   // potato_flour 
   // potato_flakes // joke cereal
   //FOOD
   public static final RegistryObject<Item> BREAD_RAW = ITEMS.register("potato_bread_raw", () -> new ItemRaw(new Item.Properties()));
-  public static final RegistryObject<Item> BREAD = ITEMS.register("potato_bread", () -> new ItemRaw(new Item.Properties()));
-  public static final RegistryObject<Item> LOAF = ITEMS.register("potato_loaf", () -> new ItemRaw(new Item.Properties()));
+  public static final RegistryObject<Item> BREAD = ITEMS.register("potato_bread", () -> new ItemBread(new Item.Properties()));
   public static final RegistryObject<Item> LOAF_RAW = ITEMS.register("potato_loaf_raw", () -> new ItemRaw(new Item.Properties()));
-  public static final RegistryObject<Item> ROLL = ITEMS.register("potato_roll", () -> new ItemRaw(new Item.Properties()));
+  public static final RegistryObject<Item> LOAF = ITEMS.register("potato_loaf", () -> new ItemBread(new Item.Properties()));
   public static final RegistryObject<Item> ROLL_RAW = ITEMS.register("potato_roll_raw", () -> new ItemRaw(new Item.Properties()));
-  public static final RegistryObject<Item> BUN = ITEMS.register("potato_bun", () -> new ItemRaw(new Item.Properties()));
+  public static final RegistryObject<Item> ROLL = ITEMS.register("potato_roll", () -> new ItemBread(new Item.Properties()));
   public static final RegistryObject<Item> BUN_RAW = ITEMS.register("potato_bun_raw", () -> new ItemRaw(new Item.Properties()));
+  public static final RegistryObject<Item> BUN = ITEMS.register("potato_bun", () -> new ItemBread(new Item.Properties()));
   //BREADMAKER BLOCK!?!?
   //round one is a BUN
   // a ROLL

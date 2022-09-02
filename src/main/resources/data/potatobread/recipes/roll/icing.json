@@ -1,0 +1,27 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"item": "potatobread:rolling_pin"
+		},
+		{
+			"item": "minecraft:milk_bucket"
+		},
+		{
+			"item": "potatobread:starch"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		}
+	],
+	"result": {
+		"item": "potatobread:icing",
+		"count": 4
+	}
+}

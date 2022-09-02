@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "jib",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "j": {
+      "item": "potatobread:pastry_knife"
+    },
+    "g": {
+      "item": "potatobread:potato_roll"
+    },
+    "i": {
+      "item": "potatobread:icing"
+    },
+    "b": {
+      "item": "minecraft:sweet_berries"
+    }
+  },
+  "result": {
+    "item": "potatobread:potato_roll",
+  	"nbt": "{\"topping\":\"berries\"}",
+    "count": 6
+  }
+}

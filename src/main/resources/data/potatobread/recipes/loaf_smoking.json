@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "potatobread:potato_loaf_raw"
+  },
+  "result": "potatobread:potato_loaf",
+  "experience": 0.15,
+  "cookingtime": 130
+}

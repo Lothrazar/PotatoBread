@@ -9,7 +9,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
@@ -26,33 +25,24 @@ public class PotatoModMain {
     PotatoModRegistry.BLOCK_ENTITIES.register(eventBus);
     ConfigManager.setup();
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-    FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setupClient);
+    FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientRegistryPotato::setupClient);
   }
+  //    MinecraftForge.EVENT_BUS.register(new WhateverEvents()); 
 
   private void setup(final FMLCommonSetupEvent event) {
-    //    MinecraftForge.EVENT_BUS.register(new WhateverEvents()); 
     event.enqueueWork(() -> {
-      //washy washy pot at o
-      //      Map<Item, CauldronInteraction> map = CauldronInteraction.newInteractionMap();
       CauldronInteraction WASH_PEEL = (state, level, pos, player, hand, stack) -> {
-        System.out.println("wash peel");
         if (stack.is(Items.POTATO)) {
-          //do it
+          //replace all the item, be generous. we could instead stack.shrink and drop just one
           player.setItemInHand(hand, new ItemStack(PotatoModRegistry.PEELED.get(), stack.getCount()));
           LayeredCauldronBlock.lowerFillLevel(state, level, pos);
           return InteractionResult.sidedSuccess(level.isClientSide);
         }
-        //
         return InteractionResult.PASS;
       };
-      //      map.put(Items.POTATO, WASH_PEEL);
-      //      CauldronInteraction.addDefaultInteractions(map);
-      //
-      CauldronInteraction.WATER.put(Items.POTATO, WASH_PEEL);
+      if (ConfigManager.CAULDRON_WASH.get()) {
+        CauldronInteraction.WATER.put(Items.POTATO, WASH_PEEL);
+      }
     });
-  }
-
-  private void setupClient(final FMLClientSetupEvent event) {
-    //for client side only setup
   }
 }

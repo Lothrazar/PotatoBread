@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "j  ",
+    "ggg"
+  ],
+  "key": {
+    "j": {
+      "item": "potatobread:rolling_pin"
+    },
+    "g": {
+      "item": "potatobread:dough"
+    }
+  },
+  "result": {
+    "item": "potatobread:potato_bread_raw",
+    "count": 3
+  }
+}

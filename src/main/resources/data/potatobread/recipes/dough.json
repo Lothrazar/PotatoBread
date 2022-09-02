@@ -5,25 +5,10 @@
 			"item": "potatobread:starch"
 		},
 		{
-			"item": "potatobread:starch"
+			"item": "minecraft:wheat"
 		},
 		{
-			"item": "potatobread:starch"
-		},
-		{
-			"item": "potatobread:starch"
-		},
-		{
-			"item": "minecraft:water_bucket"
-		},
-		{
-			"item": "potatobread:starch"
-		},
-		{
-			"item": "potatobread:starch"
-		},
-		{
-			"item": "potatobread:starch"
+			"item": "minecraft:wheat"
 		},
 		{
 			"item": "potatobread:starch"
@@ -31,6 +16,6 @@
 	],
 	"result": {
 		"item": "potatobread:dough",
-		"count": 9
+		"count": 4
 	}
 }

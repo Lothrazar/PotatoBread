@@ -1,1 +1,15 @@
-{ }
+{
+	"item.potatobread.rolling_pin": "Rolling Pin",
+	"item.potatobread.starch": "Starchy Flour",
+	"item.potatobread.dough": "Starchy Dough",
+	"item.potatobread.potato_peeled": "Peeled Potato",
+	"item.potatobread.potato_bread": "Potato Bread",
+	"item.potatobread.potato_bread_raw": "Unbaked Potato Bread",
+	"item.potatobread.potato_bun": "Potato Scone",
+	"item.potatobread.potato_bun_raw": "Unbaked Potato Scone",
+	"item.potatobread.potato_roll": "Potato Biscuit",
+	"item.potatobread.potato_roll_raw": "Unbaked Potato Biscuit",
+	"item.potatobread.potato_loaf": "Potato Breadstick",
+	"item.potatobread.potato_loaf_raw": "Unbaked Potatobreadstick",
+	"itemGroup.potatobread": "Potato-Bread Mod"
+}

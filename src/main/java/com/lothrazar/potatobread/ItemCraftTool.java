@@ -3,9 +3,9 @@ package com.lothrazar.potatobread;
 import com.lothrazar.library.item.ItemFlib;
 import net.minecraft.world.item.ItemStack;
 
-public class ItemRollingpin extends ItemFlib {
+public class ItemCraftTool extends ItemFlib {
 
-  public ItemRollingpin(Properties prop) {
+  public ItemCraftTool(Properties prop) {
     super(prop.tab(PotatoModRegistry.TAB), new ItemFlib.Settings().tooltip());
   }
 
