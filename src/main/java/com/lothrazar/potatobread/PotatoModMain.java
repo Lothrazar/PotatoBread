@@ -2,6 +2,9 @@ package com.lothrazar.potatobread;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import com.lothrazar.potatobread.content.ClientRegistryPotato;
+import com.lothrazar.potatobread.content.ConfigManager;
+import com.lothrazar.potatobread.content.PotatoModRegistry;
 import net.minecraft.core.cauldron.CauldronInteraction;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.item.ItemStack;

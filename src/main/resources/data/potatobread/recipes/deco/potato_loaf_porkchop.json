@@ -1,0 +1,27 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "jib",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "j": {
+      "item": "potatobread:pastry_knife"
+    },
+    "g": {
+      "item": "potatobread:potato_loaf"
+    },
+    "i": {
+      "item": "potatobread:mayo"
+    },
+    "b": {
+      "item": "minecraft:cooked_porkchop"
+    }
+  },
+  "result": {
+    "item": "potatobread:potato_loaf",
+  	"nbt": "{\"topping\":\"porkchop\"}",
+    "count": 6
+  }
+}

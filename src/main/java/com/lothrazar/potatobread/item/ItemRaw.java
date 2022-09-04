@@ -1,6 +1,7 @@
-package com.lothrazar.potatobread;
+package com.lothrazar.potatobread.item;
 
 import com.lothrazar.library.item.ItemFlib;
+import com.lothrazar.potatobread.content.PotatoModRegistry;
 
 public class ItemRaw extends ItemFlib {
 

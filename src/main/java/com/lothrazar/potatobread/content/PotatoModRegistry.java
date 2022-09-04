@@ -1,5 +1,9 @@
-package com.lothrazar.potatobread;
+package com.lothrazar.potatobread.content;
 
+import com.lothrazar.potatobread.PotatoModMain;
+import com.lothrazar.potatobread.item.ItemBread;
+import com.lothrazar.potatobread.item.ItemCraftTool;
+import com.lothrazar.potatobread.item.ItemRaw;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -27,10 +31,11 @@ public class PotatoModRegistry {
   //
   public static final RegistryObject<Item> PEELED = ITEMS.register("potato_peeled", () -> new ItemRaw(new Item.Properties()));
   public static final RegistryObject<Item> STARCH = ITEMS.register("starch", () -> new ItemRaw(new Item.Properties()));
-  public static final RegistryObject<Item> icing = ITEMS.register("icing", () -> new ItemRaw(new Item.Properties()));
+  public static final RegistryObject<Item> ICING = ITEMS.register("icing", () -> new ItemRaw(new Item.Properties()));
+  public static final RegistryObject<Item> MAYO = ITEMS.register("mayo", () -> new ItemRaw(new Item.Properties()));
   public static final RegistryObject<Item> DOUGH = ITEMS.register("dough", () -> new ItemRaw(new Item.Properties()));
   public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin", () -> new ItemCraftTool(new Item.Properties()));
-  public static final RegistryObject<Item> pastry_knife = ITEMS.register("pastry_knife", () -> new ItemCraftTool(new Item.Properties()));
+  public static final RegistryObject<Item> PASTRY_KNIFE = ITEMS.register("pastry_knife", () -> new ItemCraftTool(new Item.Properties()));
   // potato_flour 
   // potato_flakes // joke cereal
   //FOOD

@@ -1,6 +1,7 @@
-package com.lothrazar.potatobread;
+package com.lothrazar.potatobread.item;
 
 import com.lothrazar.library.item.ItemFlib;
+import com.lothrazar.potatobread.content.PotatoModRegistry;
 import net.minecraft.world.item.ItemStack;
 
 public class ItemCraftTool extends ItemFlib {

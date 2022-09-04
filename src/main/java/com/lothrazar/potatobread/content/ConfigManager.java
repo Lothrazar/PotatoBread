@@ -1,7 +1,8 @@
-package com.lothrazar.potatobread;
+package com.lothrazar.potatobread.content;
 
 import com.electronwill.nightconfig.core.file.CommentedFileConfig;
 import com.electronwill.nightconfig.core.io.WritingMode;
+import com.lothrazar.potatobread.PotatoModMain;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
 import net.minecraftforge.fml.loading.FMLPaths;

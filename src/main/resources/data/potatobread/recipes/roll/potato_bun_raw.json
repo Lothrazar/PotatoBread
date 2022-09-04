@@ -1,8 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "jg",
-    "  "
+    " g ",
+    "gjg",
+    " g "
   ],
   "key": {
     "j": {
@@ -13,7 +14,7 @@
     }
   },
   "result": {
-    "item": "potatobread:potato_bread_raw",
-    "count": 4
+    "item": "potatobread:potato_bun_raw",
+    "count": 16
   }
 }

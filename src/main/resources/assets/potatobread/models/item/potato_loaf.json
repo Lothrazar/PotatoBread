@@ -1,6 +1,7 @@
 {
   "parent": "builtin/generated",
   "textures": {
-    "layer0": "potatobread:item/loaf"
+    "layer0": "potatobread:item/loaf",
+    "layer1": "potatobread:item/loaf_topping"
   }
 }

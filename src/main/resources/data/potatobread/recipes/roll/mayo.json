@@ -5,32 +5,32 @@
 			"item": "potatobread:rolling_pin"
 		},
 		{
-			"item": "minecraft:milk_bucket"
+			"item": "minecraft:lily_of_the_valley"
 		},
 		{
 			"item": "potatobread:starch"
 		},
 		{
-			"item": "minecraft:sugar"
+			"item": "minecraft:egg"
 		},
 		{
-			"item": "minecraft:sugar"
+			"item": "minecraft:egg"
 		},
 		{
-			"item": "minecraft:sugar"
+			"item": "minecraft:egg"
 		},
 		{
-			"item": "minecraft:sugar"
+			"item": "minecraft:egg"
 		},
 		{
-			"item": "minecraft:sugar"
+			"item": "minecraft:egg"
 		},
 		{
-			"item": "minecraft:sugar"
+			"item": "minecraft:egg"
 		}
 	],
 	"result": {
-		"item": "potatobread:icing",
+		"item": "potatobread:mayo",
 		"count": 5
 	}
 }
