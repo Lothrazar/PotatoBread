@@ -8,7 +8,7 @@
 			"item": "minecraft:milk_bucket"
 		},
 		{
-			"item": "potatobread:starch"
+			"tag": "forge:starch"
 		},
 		{
 			"item": "minecraft:sugar"
@@ -31,6 +31,6 @@
 	],
 	"result": {
 		"item": "potatobread:icing",
-		"count": 5
+		"count": 6
 	}
 }

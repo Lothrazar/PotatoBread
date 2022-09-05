@@ -8,4 +8,8 @@ public class ItemRaw extends ItemFlib {
   public ItemRaw(Properties prop) {
     super(prop.tab(PotatoModRegistry.TAB), new ItemFlib.Settings().tooltip());
   }
+
+  public ItemRaw(Properties prop, ItemFlib.Settings s) {
+    super(prop.tab(PotatoModRegistry.TAB), s);
+  }
 }

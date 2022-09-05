@@ -10,7 +10,7 @@
       "item": "potatobread:pastry_knife"
     },
     "g": {
-      "item": "potatobread:potato_roll"
+      "item": "potatobread:potato_bread"
     },
     "i": {
       "tag": "forge:icing"
@@ -20,7 +20,7 @@
     }
   },
   "result": {
-    "item": "potatobread:potato_roll",
+    "item": "potatobread:potato_bread",
   	"nbt": "{\"topping\":\"glow\"}",
     "count": 6
   }

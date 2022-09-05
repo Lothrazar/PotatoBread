@@ -2,16 +2,16 @@
 	"type": "minecraft:crafting_shapeless",
 	"ingredients": [
 		{
-			"item": "potatobread:starch"
+			"tag": "forge:starch"
+		},
+		{
+			"tag": "forge:starch"
+		},
+		{
+			"tag": "forge:starch"
 		},
 		{
 			"item": "minecraft:wheat"
-		},
-		{
-			"item": "minecraft:wheat"
-		},
-		{
-			"item": "potatobread:starch"
 		}
 	],
 	"result": {

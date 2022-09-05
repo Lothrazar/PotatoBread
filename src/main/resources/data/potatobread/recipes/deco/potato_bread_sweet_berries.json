@@ -10,18 +10,18 @@
       "item": "potatobread:pastry_knife"
     },
     "g": {
-      "item": "potatobread:potato_loaf"
+      "item": "potatobread:potato_bread"
     },
     "i": {
-      "item": "potatobread:mayo"
+      "tag": "forge:icing"
     },
     "b": {
-      "item": "minecraft:cooked_porkchop"
+      "item": "minecraft:sweet_berries"
     }
   },
   "result": {
-    "item": "potatobread:potato_loaf",
-  	"nbt": "{\"topping\":\"porkchop\"}",
+    "item": "potatobread:potato_bread",
+  	"nbt": "{\"topping\":\"berries\"}",
     "count": 6
   }
 }

@@ -18,7 +18,8 @@ public class ClientRegistryPotato {
   private static void initColours() {
     Minecraft.getInstance().getItemColors().register((stack, tintIndex) -> {
       if (stack.getItem() == PotatoModRegistry.ROLL.get()
-          || stack.getItem() == PotatoModRegistry.LOAF.get()) {
+          || stack.getItem() == PotatoModRegistry.BREAD.get()
+          || stack.getItem() == PotatoModRegistry.BUN.get()) {
         if (tintIndex == 0) { //layer zero is outline, ignore this 
           return 0xFFFFFFFF;
         }
@@ -28,6 +29,6 @@ public class ClientRegistryPotato {
         }
       }
       return -1;
-    }, PotatoModRegistry.ROLL.get(), PotatoModRegistry.LOAF.get());
+    }, PotatoModRegistry.ROLL.get(), PotatoModRegistry.BUN.get(), PotatoModRegistry.BREAD.get());
   }
 }

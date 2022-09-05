@@ -13,7 +13,7 @@
       "item": "potatobread:potato_roll"
     },
     "i": {
-      "item": "potatobread:icing"
+      "tag": "forge:icing"
     },
     "b": {
       "item": "minecraft:sweet_berries"

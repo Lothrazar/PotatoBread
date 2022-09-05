@@ -10,18 +10,18 @@
       "item": "potatobread:pastry_knife"
     },
     "g": {
-      "item": "potatobread:potato_loaf"
+      "item": "potatobread:potato_bun"
     },
     "i": {
-      "item": "potatobread:mayo"
+      "tag": "forge:icing"
     },
     "b": {
-      "item": "minecraft:cooked_chicken"
+      "item": "minecraft:glow_berries"
     }
   },
   "result": {
-    "item": "potatobread:potato_loaf",
-  	"nbt": "{\"topping\":\"chicken\"}",
+    "item": "potatobread:potato_bun",
+  	"nbt": "{\"topping\":\"glow\"}",
     "count": 6
   }
 }
