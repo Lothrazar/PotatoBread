@@ -1,0 +1,37 @@
+{
+	"type": "cyclic:solidifier",
+	"ingredients": [
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		},
+		{
+			"item": "minecraft:sugar"
+		}
+	],
+	"energy": {
+		"rfpertick": 50,
+		"ticks": 10
+	},
+	"mix": {
+		"tag": "forge:milk",
+		"count": 500
+	},
+	"result": {
+		"item": "potatobread:icing",
+		"count": 3
+	},
+	"conditions": [
+		{
+			"values": [
+				{
+					"modid": "cyclic",
+					"type": "forge:mod_loaded"
+				}
+			],
+			"type": "forge:and"
+		}
+	]
+}

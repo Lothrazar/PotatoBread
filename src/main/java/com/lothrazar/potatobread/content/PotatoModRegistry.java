@@ -37,10 +37,10 @@ public class PotatoModRegistry {
   public static final FoodProperties GOLDEN_CARROT = Foods.GOLDEN_CARROT; // 6, 1.2  GOLDEN_CARROT
   public static final FoodProperties BAKED_POTATO = Foods.BAKED_POTATO; // 5 ,0.6
   //peeled potatoes and 3 ingredients
-  public static final RegistryObject<Item> PEELED = ITEMS.register("potato_peeled", () -> new ItemRaw(new Item.Properties().food(Foods.POTATO))); //edible same as raw
+  public static final RegistryObject<Item> PEELED = ITEMS.register("potato_peeled", () -> new ItemRaw(new Item.Properties().food(Foods.POTATO), new ItemFlib.Settings().tooltip())); //edible same as raw
   public static final RegistryObject<Item> STARCH = ITEMS.register("starch", () -> new ItemRaw(new Item.Properties(), new ItemFlib.Settings().noTooltip()));
-  public static final RegistryObject<Item> DOUGH = ITEMS.register("dough", () -> new ItemRaw(new Item.Properties(), new ItemFlib.Settings().noTooltip()));
-  public static final RegistryObject<Item> ICING = ITEMS.register("icing", () -> new ItemRaw(new Item.Properties(), new ItemFlib.Settings().noTooltip()));
+  public static final RegistryObject<Item> DOUGH = ITEMS.register("dough", () -> new ItemRaw(new Item.Properties(), new ItemFlib.Settings().tooltip()));
+  public static final RegistryObject<Item> ICING = ITEMS.register("icing", () -> new ItemRaw(new Item.Properties(), new ItemFlib.Settings().tooltip()));
   //  public static final RegistryObject<Item> MAYO = ITEMS.register("mayo", () -> new ItemRaw(new Item.Properties()));
   //2 tools
   public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin", () -> new ItemCraftTool(new Item.Properties().rarity(Rarity.UNCOMMON)));
@@ -53,7 +53,7 @@ public class PotatoModRegistry {
   public static final RegistryObject<Item> ROLL_RAW = ITEMS.register("potato_roll_raw", () -> new ItemRaw(new Item.Properties()));
   public static final RegistryObject<Item> BUN_RAW = ITEMS.register("potato_bun_raw", () -> new ItemRaw(new Item.Properties()));
   //
-  public static final RegistryObject<Item> LOAF = ITEMS.register("potato_loaf", () -> new ItemBread(new Item.Properties().food(FOOD_HEAVY_BREAD).rarity(Rarity.UNCOMMON)));
+  public static final RegistryObject<Item> LOAF = ITEMS.register("potato_loaf", () -> new ItemBread(new Item.Properties().food(FOOD_HEAVY_BREAD).rarity(Rarity.UNCOMMON), new ItemFlib.Settings().tooltip()));
   public static final RegistryObject<Item> BREAD = ITEMS.register("potato_bread", () -> new ItemBread(new Item.Properties().food(Foods.BAKED_POTATO)));
   public static final RegistryObject<Item> ROLL = ITEMS.register("potato_roll", () -> new ItemBread(new Item.Properties().food(Foods.BAKED_POTATO)));
   public static final RegistryObject<Item> BUN = ITEMS.register("potato_bun", () -> new ItemBread(new Item.Properties().food(Foods.BAKED_POTATO)));

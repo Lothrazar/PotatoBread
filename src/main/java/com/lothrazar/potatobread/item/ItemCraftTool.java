@@ -7,7 +7,7 @@ import net.minecraft.world.item.ItemStack;
 public class ItemCraftTool extends ItemFlib {
 
   public ItemCraftTool(Properties prop) {
-    super(prop.tab(PotatoModRegistry.TAB), new ItemFlib.Settings().tooltip());
+    super(prop.tab(PotatoModRegistry.TAB).stacksTo(1), new ItemFlib.Settings().tooltip());
   }
 
   @Override

@@ -28,8 +28,8 @@ public class PotatoModMain {
   }
   //    MinecraftForge.EVENT_BUS.register(new WhateverEvents()); 
 
-  //KNIFE and ROLLING PIN: tooltip about how theyre multi use
-  //potato_loaf.tooltip : and possibly rarity: most filling, cannot be decorated
+  //cyclic recipes for icing and dough, maybe liquid milk
+  //farmers delight cookpot recipes
   //
   private void setup(final FMLCommonSetupEvent event) {
     CauldronRegistry.setup(event);

@@ -6,7 +6,7 @@ import com.lothrazar.potatobread.content.PotatoModRegistry;
 public class ItemRaw extends ItemFlib {
 
   public ItemRaw(Properties prop) {
-    super(prop.tab(PotatoModRegistry.TAB), new ItemFlib.Settings().tooltip());
+    super(prop.tab(PotatoModRegistry.TAB), new ItemFlib.Settings().noTooltip());
   }
 
   public ItemRaw(Properties prop, ItemFlib.Settings s) {

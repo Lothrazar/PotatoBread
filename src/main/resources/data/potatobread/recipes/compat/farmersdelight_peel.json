@@ -1,0 +1,28 @@
+{
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "minecraft:potato"
+    }
+  ],
+  "tool": {
+    "tag": "forge:tools/knives"
+  },
+  "result": [
+    {
+      "item": "potatobread:potato_peeled",
+      "count": 1
+    }
+  ],
+	"conditions": [
+		{
+			"values": [
+				{
+					"modid": "farmersdelight",
+					"type": "forge:mod_loaded"
+				}
+			],
+			"type": "forge:and"
+		}
+	]
+}

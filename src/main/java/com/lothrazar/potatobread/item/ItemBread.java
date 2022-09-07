@@ -22,6 +22,10 @@ public class ItemBread extends ItemFlib {
     super(prop.tab(PotatoModRegistry.TAB), new ItemFlib.Settings());
   }
 
+  public ItemBread(Properties prop, ItemFlib.Settings s) {
+    super(prop.tab(PotatoModRegistry.TAB), s);
+  }
+
   @Override
   @OnlyIn(Dist.CLIENT)
   public void appendHoverText(ItemStack stack, Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {

@@ -46,21 +46,22 @@ public enum BreadToppings {
       case MELON:
         return 0x00FF3059;
     }
-    //      default:
-    System.out.println("missing col " + this);
+    //      default: 
     return 0xFFFFFFFF;
   }
 
   MobEffectInstance getEffect() {
     switch (this) {
       case BERRIES:
-        return new MobEffectInstance(MobEffects.DIG_SPEED, 20 * 200, 1);
+        return new MobEffectInstance(MobEffects.DIG_SPEED, 20 * 60, 1);
       case CHOCOLATE:
-        return new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20 * 60, 0);
+        return new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20 * 30, 0);
       case GLOW:
-        return new MobEffectInstance(MobEffects.ABSORPTION, 20 * 200, 1);
+        return new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 60, 1);
       case MELON:
-        return new MobEffectInstance(MobEffects.REGENERATION, 20 * 30, 0);
+        return new MobEffectInstance(MobEffects.ABSORPTION, 20 * 30, 2);
+      //      case APPLE:
+      //        return new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 30, 0);
     }
     return null;
   }
