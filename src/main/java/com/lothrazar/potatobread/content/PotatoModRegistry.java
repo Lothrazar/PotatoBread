@@ -44,7 +44,7 @@ public class PotatoModRegistry {
   //  public static final RegistryObject<Item> MAYO = ITEMS.register("mayo", () -> new ItemRaw(new Item.Properties()));
   //2 tools
   public static final RegistryObject<Item> ROLLING_PIN = ITEMS.register("rolling_pin", () -> new ItemCraftTool(new Item.Properties().rarity(Rarity.UNCOMMON)));
-  public static final RegistryObject<Item> PASTRY_KNIFE = ITEMS.register("pastry_knife", () -> new ItemCraftTool(new Item.Properties().rarity(Rarity.UNCOMMON)));
+  //  public static final RegistryObject<Item> PASTRY_KNIFE = ITEMS.register("pastry_knife", () -> new ItemCraftTool(new Item.Properties().rarity(Rarity.UNCOMMON)));
   // potato_flour 
   // potato_flakes // joke cereal
   //FOOD

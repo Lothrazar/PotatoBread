@@ -1,14 +1,11 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "jib",
+    "ibi",
     "ggg",
     "ggg"
   ],
   "key": {
-    "j": {
-      "item": "potatobread:pastry_knife"
-    },
     "g": {
       "item": "potatobread:potato_bread"
     },

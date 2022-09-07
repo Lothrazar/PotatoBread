@@ -93,13 +93,17 @@ dependencies {
     //https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions
 	//https://www.curseforge.com/minecraft/mc-mods/just-enough-effect-descriptions-jeed
 	
-  //  implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
+   //implementation fg.deobf("curse.maven:autoreglib-250363:3642382")
+  // implementation fg.deobf("curse.maven:quark-243121:3840125")
+  //  implementation fg.deobf("curse.maven:cyclic-239286:3946183")
+  //  implementation fg.deobf("curse.maven:farmers-delight-398521:3834150")
+    
+ // //  implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
   //  compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
   //  runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
 
 
   //  implementation fg.deobf("curse.maven:simple-storage-network-268495:3257204")
-  //  implementation fg.deobf("curse.maven:cyclic-239286:3249448")
   //  implementation fg.deobf("curse.maven:ctm-267602:3137659")
   //  implementation fg.deobf("curse.maven:storage-drawers-223852:3180569")
   //  implementation fg.deobf("curse.maven:refined-storage-243076:3157354")
