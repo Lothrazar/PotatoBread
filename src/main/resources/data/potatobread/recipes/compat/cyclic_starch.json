@@ -1,0 +1,34 @@
+{
+	"type": "cyclic:crusher",
+	"input": {
+		"item": "potatobread:potato_peeled"
+	},
+	"energy": {
+		"ticks": 60,
+		"rfpertick": 20
+	},
+	"result": {
+		"item": "potatobread:starch",
+		"count": 2
+	},
+	"percent": 10,
+	"bonus": {
+		"item": "potatobread:starch",
+		"count": 1
+	},
+	"conditions": [
+		{
+			"values": [
+				{
+					"modid": "cyclic",
+					"type": "forge:mod_loaded"
+				},
+				{
+					"item": "cyclic:crusher",
+					"type": "forge:item_exists"
+				}
+			],
+			"type": "forge:and"
+		}
+	]
+}

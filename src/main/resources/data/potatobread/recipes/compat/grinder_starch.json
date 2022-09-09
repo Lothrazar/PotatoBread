@@ -1,0 +1,25 @@
+{
+  "type": "plaingrinder:grinder",
+  "input": {
+    "item": "potatobread:potato_peeled"
+  },
+  "result": {
+    "item": "potatobread:starch",
+    "count": 2
+  },
+	"conditions": [
+		{
+			"values": [
+				{
+					"modid": "plaingrinder",
+					"type": "forge:mod_loaded"
+				},
+				{
+					"item": "plaingrinder:grinder",
+					"type": "forge:item_exists"
+				}
+			],
+			"type": "forge:and"
+		}
+	]
+}

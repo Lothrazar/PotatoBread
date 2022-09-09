@@ -30,6 +30,9 @@ public class PotatoModMain {
 
   //cyclic recipes for icing and dough, maybe liquid milk
   //farmers delight cookpot recipes
+  //PLAIN GRINDER : grind starch
+  //cyclic crusher: grind starch 
+  //
   //
   private void setup(final FMLCommonSetupEvent event) {
     CauldronRegistry.setup(event);

@@ -1,0 +1,30 @@
+{
+  "type": "farmersdelight:cooking",
+  "ingredients": [
+    {
+      "tag": "forge:icing"
+    },
+    {
+      "item": "minecraft:glow_berries"
+    },
+    {
+      "tag": "forge:icing"
+    },
+    {
+      "item": "potatobread:potato_roll_raw"
+    },
+    {
+      "item": "potatobread:potato_roll_raw"
+    },
+    {
+      "item": "potatobread:potato_roll_raw"
+    }
+  ],
+  "result": {
+    "item": "potatobread:potato_roll",
+  	"nbt": "{\"topping\":\"glow\"}",
+    "count": 6
+  },
+  "experience": 0.35,
+  "cookingtime": 200
+}

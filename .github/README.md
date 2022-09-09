@@ -4,8 +4,8 @@
 Pixel Art from https://twitter.com/Pixelahead 
 
 
-[![](http://cf.way2muchnoise.eu/0.svg)](https://www.curseforge.com/minecraft/mc-mods/potato-bread) 
-[![](http://cf.way2muchnoise.eu/versions/0.svg)](https://www.curseforge.com/minecraft/mc-mods/potato-bread)
+[![](http://cf.way2muchnoise.eu/666539.svg)](https://www.curseforge.com/minecraft/mc-mods/potato-bread) 
+[![](http://cf.way2muchnoise.eu/versions/666539.svg)](https://www.curseforge.com/minecraft/mc-mods/potato-bread)
 
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)

@@ -57,6 +57,6 @@ potatobread by Lothrazar
 [[dependencies.potatobread]]
     modId="flib"
     mandatory=true
-    versionRange="[0.0.0,)"
+    versionRange="[0.0.2,)"
     ordering="NONE"
     side="BOTH"
