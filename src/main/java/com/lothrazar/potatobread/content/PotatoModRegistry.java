@@ -1,18 +1,19 @@
 package com.lothrazar.potatobread.content;
 
 import com.lothrazar.library.item.ItemFlib;
+import com.lothrazar.library.registry.RegistryFactory;
 import com.lothrazar.potatobread.PotatoModMain;
 import com.lothrazar.potatobread.item.ItemBread;
 import com.lothrazar.potatobread.item.ItemCraftTool;
 import com.lothrazar.potatobread.item.ItemRaw;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
+import net.minecraftforge.event.CreativeModeTabEvent;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -23,15 +24,13 @@ public class PotatoModRegistry {
 
   public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PotatoModMain.MODID);
   public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PotatoModMain.MODID);
-  public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITIES, PotatoModMain.MODID);
-  //
-  public static final CreativeModeTab TAB = new CreativeModeTab(PotatoModMain.MODID) {
+  public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, PotatoModMain.MODID);
 
-    @Override
-    public ItemStack makeIcon() {
-      return new ItemStack(ROLLING_PIN.get());
-    }
-  };
+  @SubscribeEvent
+  public static void buildContents(CreativeModeTabEvent.Register event) {
+    RegistryFactory.buildTab(event, PotatoModMain.MODID, ROLLING_PIN.get().asItem(), ITEMS);
+  }
+
   public static final FoodProperties FOOD_HEAVY_BREAD = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.2F).build(); // 5, 0.6 is normal bread
   public static final FoodProperties COOKED_BEEF = Foods.COOKED_BEEF; // 8, 0.8  is COOKED_BEEF
   public static final FoodProperties GOLDEN_CARROT = Foods.GOLDEN_CARROT; // 6, 1.2  GOLDEN_CARROT

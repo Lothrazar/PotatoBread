@@ -1,18 +1,9 @@
-buildscript {
-    repositories {
-        maven { url = 'https://maven.minecraftforge.net/' }
-        mavenCentral()
-    }
-    dependencies {
-        classpath group: 'net.minecraftforge.gradle', name: 'ForgeGradle', version: '5.1.+', changing: true
-    }
-}
-// Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 plugins {
     id 'eclipse'
     id 'maven-publish'
+    id 'net.minecraftforge.gradle' version '5.1.+'
 }
-apply plugin: 'net.minecraftforge.gradle'
+
 
 // apply from: 'https://raw.githubusercontent.com/SizableShrimp/Forge-Class-Remapper/main/classremapper.gradle' 
 
@@ -23,16 +14,11 @@ group = 'com.lothrazar.potatobread' // http://maven.apache.org/guides/mini/guide
 archivesBaseName = 'potatobread'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
+println "Java: ${System.getProperty 'java.version'}, JVM: ${System.getProperty 'java.vm.version'} (${System.getProperty 'java.vendor'}), Arch: ${System.getProperty 'os.arch'}"
 
 minecraft {
-    // The mappings can be changed at any time, and must be in the following format.
-    // snapshot_YYYYMMDD   Snapshot are built nightly.
-    // stable_#            Stables are built at the discretion of the MCP team.
-    // Use non-default mappings at your own risk. they may not always work.
-    // Simply re-run your setup task after changing the mappings to update your workspace.
-    
-    
-    mappings channel: 'official', version: '1.18.2'
+
+    mappings channel: 'official', version: "${mc_version}"
  
     accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
 
@@ -78,7 +64,6 @@ minecraft {
         }
     }
 }
-
 dependencies {
     // Specify the version of Minecraft to use, If this is any group other then 'net.minecraft' it is assumed
     // that the dep is a ForgeGradle 'patcher' dependency. And it's patches will be applied.
@@ -88,30 +73,10 @@ dependencies {
 
     implementation fg.deobf("blank:flib-${mc_version}:${flib_version}")
     
-    implementation fg.deobf("mezz.jei:jei-${mc_version}:${jei_version}")
-    
-    //https://www.curseforge.com/minecraft/mc-mods/enchantment-descriptions
-	//https://www.curseforge.com/minecraft/mc-mods/just-enough-effect-descriptions-jeed
 	
-    implementation fg.deobf("curse.maven:cyclic-239286:3946183")
-    implementation fg.deobf("curse.maven:farmers-delight-398521:3834150")
-    implementation fg.deobf("curse.maven:plain-grinder-452000:3653027")
-    implementation fg.deobf("curse.maven:the-one-probe-245211:3671753")
-    
- // //  implementation fg.deobf("top.theillusivec4.curios:curios-forge:${curios_version}")
-  //  compileOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}:api")
-  //  runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:${patchouli_version}")
-
-
-  //  implementation fg.deobf("curse.maven:simple-storage-network-268495:3257204")
-  //  implementation fg.deobf("curse.maven:ctm-267602:3137659")
-  //  implementation fg.deobf("curse.maven:storage-drawers-223852:3180569")
-  //  implementation fg.deobf("curse.maven:refined-storage-243076:3157354")
-  //  implementation fg.deobf("curse.maven:cucumber-272335:3187116")
-  //  implementation fg.deobf("curse.maven:mystical-agriculture-246640:3152061")
-   //implementation fg.deobf("curse.maven:autoreglib-250363:3642382")
-  // implementation fg.deobf("curse.maven:quark-243121:3840125")
-    
+	runtimeOnly fg.deobf("mezz.jei:jei-${mc_version}-forge:${jei_version}")
+	
+	
     // For more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
@@ -175,6 +140,12 @@ publishing {
         }
     }
 }
+
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8' // Use the UTF-8 charset for Java compilation
+}
+
 
 task signJar(type: SignJar, dependsOn: jar) {
 

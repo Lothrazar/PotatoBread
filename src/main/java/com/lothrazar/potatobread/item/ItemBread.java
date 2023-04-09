@@ -2,10 +2,9 @@ package com.lothrazar.potatobread.item;
 
 import java.util.List;
 import com.lothrazar.library.item.ItemFlib;
-import com.lothrazar.potatobread.content.PotatoModRegistry;
+import com.lothrazar.library.util.ChatUtil;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.entity.LivingEntity;
@@ -19,11 +18,11 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 public class ItemBread extends ItemFlib {
 
   public ItemBread(Properties prop) {
-    super(prop.tab(PotatoModRegistry.TAB), new ItemFlib.Settings());
+    super(prop, new ItemFlib.Settings());
   }
 
   public ItemBread(Properties prop, ItemFlib.Settings s) {
-    super(prop.tab(PotatoModRegistry.TAB), s);
+    super(prop, s);
   }
 
   @Override
@@ -33,12 +32,12 @@ public class ItemBread extends ItemFlib {
     if (top != null) {
       // tooltip.add(new TranslatableComponent(stack.getDescriptionId() + "." + top.toString()).withStyle(ChatFormatting.AQUA));
       MobEffectInstance mobeffectinstance = top.getEffect();
-      MutableComponent mutablecomponent = new TranslatableComponent(mobeffectinstance.getDescriptionId());
+      MutableComponent mutablecomponent = ChatUtil.ilang(mobeffectinstance.getDescriptionId());
       if (mobeffectinstance.getAmplifier() > 0) {
-        mutablecomponent = new TranslatableComponent("potion.withAmplifier", mutablecomponent, new TranslatableComponent("potion.potency." + mobeffectinstance.getAmplifier()));
+        mutablecomponent = Component.translatable("potion.withAmplifier", mutablecomponent, ChatUtil.ilang("potion.potency." + mobeffectinstance.getAmplifier()));
       }
       if (mobeffectinstance.getDuration() > 20) {
-        mutablecomponent = new TranslatableComponent("potion.withDuration", mutablecomponent, MobEffectUtil.formatDuration(mobeffectinstance, 1));
+        mutablecomponent = Component.translatable("potion.withDuration", mutablecomponent, MobEffectUtil.formatDuration(mobeffectinstance, 1));
       }
       tooltip.add(mutablecomponent.withStyle(mobeffectinstance.getEffect().getCategory().getTooltipFormatting()));
     }
@@ -62,7 +61,7 @@ public class ItemBread extends ItemFlib {
   public Component getName(ItemStack st) {
     BreadToppings top = BreadToppings.fromStack(st);
     if (top != null) {
-      return new TranslatableComponent(this.getDescriptionId(st) + "." + top.toString());
+      return Component.translatable(this.getDescriptionId(st) + "." + top.toString());
     }
     return super.getName(st); //  new TranslatableComponent(this.getDescriptionId(st) );
   }
