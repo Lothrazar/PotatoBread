@@ -3,8 +3,7 @@ package com.lothrazar.potatobread;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.lothrazar.potatobread.content.CauldronRegistry;
-import com.lothrazar.potatobread.content.ClientRegistryPotato;
-import com.lothrazar.potatobread.content.ConfigManager;
+import com.lothrazar.potatobread.content.ConfigRegistryPotato;
 import com.lothrazar.potatobread.content.PotatoModRegistry;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.common.Mod;
@@ -22,9 +21,8 @@ public class PotatoModMain {
     PotatoModRegistry.BLOCKS.register(eventBus);
     PotatoModRegistry.ITEMS.register(eventBus);
     PotatoModRegistry.BLOCK_ENTITIES.register(eventBus);
-    ConfigManager.setup();
+    new ConfigRegistryPotato();
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-    FMLJavaModLoadingContext.get().getModEventBus().addListener(ClientRegistryPotato::setupClient);
   }
   //    MinecraftForge.EVENT_BUS.register(new WhateverEvents()); 
 
