@@ -1,22 +1,27 @@
 package com.lothrazar.potatobread.content;
 
 import com.lothrazar.library.item.ItemFlib;
-import com.lothrazar.library.registry.RegistryFactory;
 import com.lothrazar.potatobread.PotatoModMain;
 import com.lothrazar.potatobread.item.ItemBread;
 import com.lothrazar.potatobread.item.ItemCraftTool;
 import com.lothrazar.potatobread.item.ItemRaw;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
+import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.entity.BlockEntityType;
-import net.minecraftforge.event.CreativeModeTabEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.RegisterEvent;
 import net.minecraftforge.registries.RegistryObject;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -25,10 +30,19 @@ public class PotatoModRegistry {
   public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, PotatoModMain.MODID);
   public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, PotatoModMain.MODID);
   public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(ForgeRegistries.BLOCK_ENTITY_TYPES, PotatoModMain.MODID);
+  private static final ResourceKey<CreativeModeTab> TAB = ResourceKey.create(Registries.CREATIVE_MODE_TAB, new ResourceLocation(PotatoModMain.MODID, "tab"));
 
   @SubscribeEvent
-  public static void buildContents(CreativeModeTabEvent.Register event) {
-    RegistryFactory.buildTab(event, PotatoModMain.MODID, ROLLING_PIN.get().asItem(), ITEMS);
+  public static void onCreativeModeTabRegister(RegisterEvent event) {
+    event.register(Registries.CREATIVE_MODE_TAB, helper -> {
+      helper.register(TAB, CreativeModeTab.builder().icon(() -> new ItemStack(ROLLING_PIN.get()))
+          .title(Component.translatable("itemGroup." + PotatoModMain.MODID))
+          .displayItems((enabledFlags, populator) -> {
+            for (RegistryObject<Item> entry : ITEMS.getEntries()) {
+              populator.accept(entry.get());
+            }
+          }).build());
+    });
   }
 
   public static final FoodProperties FOOD_HEAVY_BREAD = (new FoodProperties.Builder()).nutrition(8).saturationMod(1.2F).build(); // 5, 0.6 is normal bread
