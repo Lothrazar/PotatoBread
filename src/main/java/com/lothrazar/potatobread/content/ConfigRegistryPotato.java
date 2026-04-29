@@ -8,7 +8,7 @@ import net.neoforged.neoforge.common.ModConfigSpec.BooleanValue;
 
 public class ConfigRegistryPotato {
 
-  private static final ModConfigSpec CONFIG;
+  public static final ModConfigSpec CONFIG;
   public static BooleanValue CAULDRON_WASH;
   static {
     final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
@@ -18,7 +18,4 @@ public class ConfigRegistryPotato {
     CONFIG = BUILDER.build();
   }
 
-  public ConfigRegistryPotato(ModContainer modContainer) {
-    modContainer.registerConfig(ModConfig.Type.COMMON, CONFIG);
-  }
 }

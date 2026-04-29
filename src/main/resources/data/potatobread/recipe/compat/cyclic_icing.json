@@ -25,13 +25,8 @@
 	},
 	"neoforge:conditions": [
 		{
-			"values": [
-				{
-					"modid": "cyclic",
-					"type": "neoforge:mod_loaded"
-				}
-			],
-			"type": "neoforge:and"
+			"type": "neoforge:mod_loaded",
+			"modid": "cyclic"
 		}
 	]
 }

@@ -9,17 +9,12 @@
   },
 	"neoforge:conditions": [
 		{
-			"values": [
-				{
-					"modid": "plaingrinder",
-					"type": "neoforge:mod_loaded"
-				},
-				{
-					"item": "plaingrinder:grinder",
-					"type": "neoforge:item_exists"
-				}
-			],
-			"type": "neoforge:and"
+			"type": "neoforge:mod_loaded",
+			"modid": "plaingrinder"
+		},
+		{
+			"type": "neoforge:item_exists",
+			"item": "plaingrinder:grinder"
 		}
 	]
 }

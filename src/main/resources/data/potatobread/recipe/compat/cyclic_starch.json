@@ -18,17 +18,12 @@
 	},
 	"neoforge:conditions": [
 		{
-			"values": [
-				{
-					"modid": "cyclic",
-					"type": "neoforge:mod_loaded"
-				},
-				{
-					"item": "cyclic:crusher",
-					"type": "neoforge:item_exists"
-				}
-			],
-			"type": "neoforge:and"
+			"type": "neoforge:mod_loaded",
+			"modid": "cyclic"
+		},
+		{
+			"type": "neoforge:item_exists",
+			"item": "cyclic:crusher"
 		}
 	]
 }

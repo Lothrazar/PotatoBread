@@ -14,15 +14,10 @@
       "count": 1
     }
   ],
-	"neoforge:conditions": [
-		{
-			"values": [
-				{
-					"modid": "farmersdelight",
-					"type": "neoforge:mod_loaded"
-				}
-			],
-			"type": "neoforge:and"
-		}
-	]
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "farmersdelight"
+    }
+  ]
 }

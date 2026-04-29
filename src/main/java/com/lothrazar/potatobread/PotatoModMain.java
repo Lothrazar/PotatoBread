@@ -1,6 +1,7 @@
 package com.lothrazar.potatobread;
 
 import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.config.ModConfig;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import com.lothrazar.potatobread.content.CauldronRegistry;
@@ -21,7 +22,7 @@ public class PotatoModMain {
     PotatoModRegistry.ITEMS.register(modEventBus);
     PotatoModRegistry.BLOCK_ENTITIES.register(modEventBus);
     PotatoModRegistry.TABS.register(modEventBus);
-    new ConfigRegistryPotato(modContainer);
+    modContainer.registerConfig(ModConfig.Type.COMMON, ConfigRegistryPotato.CONFIG);
     modEventBus.addListener(this::setup);
   }
   //    MinecraftForge.EVENT_BUS.register(new WhateverEvents());
