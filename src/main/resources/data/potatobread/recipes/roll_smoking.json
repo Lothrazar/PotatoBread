@@ -1,9 +1,0 @@
-{
-  "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "potatobread:potato_roll_raw"
-  },
-  "result": "potatobread:potato_roll",
-  "experience": 0.15,
-  "cookingtime": 80
-}

@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ibi",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": {
+      "item": "potatobread:potato_roll"
+    },
+    "i": {
+      "tag": "c:icing"
+    },
+    "b": {
+      "item": "minecraft:sweet_berries"
+    }
+  },
+  "result": {
+    "id": "potatobread:potato_roll",
+    "count": 6,
+    "components": {
+      "minecraft:custom_data": {"topping": "berries"}
+    }
+  }
+}

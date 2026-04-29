@@ -2,7 +2,7 @@ package com.lothrazar.potatobread.content;
 
 import com.lothrazar.library.registry.RecipeCauldronFactory;
 import net.minecraft.world.item.Items;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
 public class CauldronRegistry {
 

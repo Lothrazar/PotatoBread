@@ -8,12 +8,12 @@ import net.minecraft.network.chat.MutableComponent;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffectUtil;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
-import net.minecraftforge.api.distmarker.Dist;
-import net.minecraftforge.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
 
 public class ItemBread extends ItemFlib {
 
@@ -27,7 +27,7 @@ public class ItemBread extends ItemFlib {
 
   @Override
   @OnlyIn(Dist.CLIENT)
-  public void appendHoverText(ItemStack stack, Level worldIn, List<Component> tooltip, TooltipFlag flagIn) {
+  public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flagIn) {
     BreadToppings top = BreadToppings.fromStack(stack);
     if (top != null) {
       // tooltip.add(new TranslatableComponent(stack.getDescriptionId() + "." + top.toString()).withStyle(ChatFormatting.AQUA));
@@ -37,24 +37,16 @@ public class ItemBread extends ItemFlib {
         mutablecomponent = Component.translatable("potion.withAmplifier", mutablecomponent, ChatUtil.ilang("potion.potency." + mobeffectinstance.getAmplifier()));
       }
       if (mobeffectinstance.getDuration() > 20) {
-        mutablecomponent = Component.translatable("potion.withDuration", mutablecomponent, MobEffectUtil.formatDuration(mobeffectinstance, 1));
+        mutablecomponent = Component.translatable("potion.withDuration", mutablecomponent, MobEffectUtil.formatDuration(mobeffectinstance, 1.0f, 20.0f));
       }
-      tooltip.add(mutablecomponent.withStyle(mobeffectinstance.getEffect().getCategory().getTooltipFormatting()));
+      tooltip.add(mutablecomponent.withStyle(mobeffectinstance.getEffect().value().getCategory().getTooltipFormatting()));
     }
-    super.appendHoverText(stack, worldIn, tooltip, flagIn);
+    super.appendHoverText(stack, context, tooltip, flagIn);
   }
 
   @Override
   public boolean isFoil(ItemStack stack) {
     return false; // ?? do we want shimmerToppings.fromStack(stack) != null;
-  }
-
-  @Override
-  public Rarity getRarity(ItemStack stack) {
-    if (BreadToppings.fromStack(stack) != null) {
-      return Rarity.EPIC;
-    }
-    return Rarity.COMMON;
   }
 
   @Override

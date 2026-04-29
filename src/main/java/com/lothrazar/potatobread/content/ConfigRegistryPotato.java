@@ -1,23 +1,24 @@
 package com.lothrazar.potatobread.content;
 
-import com.lothrazar.library.config.ConfigTemplate;
 import com.lothrazar.potatobread.PotatoModMain;
-import net.minecraftforge.common.ForgeConfigSpec;
-import net.minecraftforge.common.ForgeConfigSpec.BooleanValue;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.fml.config.ModConfig;
+import net.neoforged.neoforge.common.ModConfigSpec;
+import net.neoforged.neoforge.common.ModConfigSpec.BooleanValue;
 
-public class ConfigRegistryPotato extends ConfigTemplate {
+public class ConfigRegistryPotato {
 
-  private static final ForgeConfigSpec CONFIG;
+  private static final ModConfigSpec CONFIG;
   public static BooleanValue CAULDRON_WASH;
   static {
-    final ForgeConfigSpec.Builder BUILDER = builder();
+    final ModConfigSpec.Builder BUILDER = new ModConfigSpec.Builder();
     BUILDER.comment("General settings").push(PotatoModMain.MODID);
     CAULDRON_WASH = BUILDER.comment("If potatoes turn into Peeled Potatoes using a water cauldron").define("water_cauldron.potato", true);
     BUILDER.pop(); // one pop for every push
     CONFIG = BUILDER.build();
   }
 
-  public ConfigRegistryPotato() {
-    CONFIG.setConfig(setup(PotatoModMain.MODID));
+  public ConfigRegistryPotato(ModContainer modContainer) {
+    modContainer.registerConfig(ModConfig.Type.COMMON, CONFIG);
   }
 }
