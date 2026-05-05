@@ -1,0 +1,6 @@
+#General settings
+[potatobread]
+
+	[potatobread.water_cauldron]
+		#If potatoes turn into Peeled Potatoes using a water cauldron
+		potato = true
