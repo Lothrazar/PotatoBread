@@ -30,5 +30,6 @@
 	"item.potatobread.potato_loaf": "Heavy Bread Loaf",
 	"item.potatobread.potato_loaf.tooltip": "Extremely filling; cannot be decorated",
 	"item.potatobread.potato_loaf_raw": "Unbaked Heavy Bread Loaf",
-	"itemGroup.potatobread": "Potato-Bread Mod"
+	"itemGroup.potatobread": "Potato-Bread Mod",
+	"jei.potatobread.cauldron_wash": "Cauldron Washing"
 }

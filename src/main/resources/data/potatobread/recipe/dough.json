@@ -1,0 +1,21 @@
+{
+	"type": "minecraft:crafting_shapeless",
+	"ingredients": [
+		{
+			"tag": "c:starch"
+		},
+		{
+			"tag": "c:starch"
+		},
+		{
+			"tag": "c:starch"
+		},
+		{
+			"item": "minecraft:wheat"
+		}
+	],
+	"result": {
+		"id": "potatobread:dough",
+		"count": 4
+	}
+}

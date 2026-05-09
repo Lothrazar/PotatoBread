@@ -1,0 +1,26 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "ibi",
+    "ggg",
+    "ggg"
+  ],
+  "key": {
+    "g": {
+      "item": "potatobread:potato_bun"
+    },
+    "i": {
+      "tag": "c:icing"
+    },
+    "b": {
+      "item": "minecraft:glistering_melon_slice"
+    }
+  },
+  "result": {
+    "id": "potatobread:potato_bun",
+    "count": 6,
+    "components": {
+      "minecraft:custom_data": {"topping": "melon"}
+    }
+  }
+}

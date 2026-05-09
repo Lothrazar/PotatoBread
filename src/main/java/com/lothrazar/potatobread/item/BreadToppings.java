@@ -1,9 +1,12 @@
 package com.lothrazar.potatobread.item;
 
+import net.minecraft.core.component.DataComponents;
+import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.CustomData;
 
 public enum BreadToppings {
 
@@ -24,8 +27,12 @@ public enum BreadToppings {
   }
 
   public static BreadToppings fromStack(ItemStack stack) {
-    if (stack.hasTag() && stack.getTag().contains("topping")) {
-      return fromString(stack.getTag().getString("topping"));
+    CustomData customData = stack.get(DataComponents.CUSTOM_DATA);
+    if (customData != null) {
+      CompoundTag tag = customData.copyTag();
+      if (tag.contains("topping")) {
+        return fromString(tag.getString("topping"));
+      }
     }
     return null;
   }
@@ -46,7 +53,7 @@ public enum BreadToppings {
       case MELON:
         return 0x00FF3059;
     }
-    //      default: 
+    //      default:
     return 0xFFFFFFFF;
   }
 

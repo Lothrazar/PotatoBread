@@ -1,0 +1,29 @@
+{
+	"type": "cyclic:crusher",
+	"input": {
+		"item": "potatobread:potato_peeled"
+	},
+	"energy": {
+		"ticks": 60,
+		"rfpertick": 20
+	},
+	"result": {
+		"id": "potatobread:starch",
+		"count": 2
+	},
+	"percent": 10,
+	"bonus": {
+		"item": "potatobread:starch",
+		"count": 1
+	},
+	"neoforge:conditions": [
+		{
+			"type": "neoforge:mod_loaded",
+			"modid": "cyclic"
+		},
+		{
+			"type": "neoforge:item_exists",
+			"item": "cyclic:crusher"
+		}
+	]
+}
