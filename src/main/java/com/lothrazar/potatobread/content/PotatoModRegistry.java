@@ -7,7 +7,7 @@ import com.lothrazar.potatobread.item.ItemCraftTool;
 import com.lothrazar.potatobread.item.ItemRaw;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;

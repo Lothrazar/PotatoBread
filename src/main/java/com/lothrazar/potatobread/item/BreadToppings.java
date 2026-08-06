@@ -31,7 +31,7 @@ public enum BreadToppings {
     if (customData != null) {
       CompoundTag tag = customData.copyTag();
       if (tag.contains("topping")) {
-        return fromString(tag.getString("topping"));
+        return fromString(tag.getStringOr("topping", ""));
       }
     }
     return null;
@@ -60,11 +60,11 @@ public enum BreadToppings {
   MobEffectInstance getEffect() {
     switch (this) {
       case BERRIES:
-        return new MobEffectInstance(MobEffects.DIG_SPEED, 20 * 60, 1);
+        return new MobEffectInstance(MobEffects.HASTE, 20 * 60, 1);
       case CHOCOLATE:
-        return new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 20 * 30, 0);
+        return new MobEffectInstance(MobEffects.RESISTANCE, 20 * 30, 0);
       case GLOW:
-        return new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 20 * 60, 1);
+        return new MobEffectInstance(MobEffects.SPEED, 20 * 60, 1);
       case MELON:
         return new MobEffectInstance(MobEffects.ABSORPTION, 20 * 30, 2);
       //      case APPLE:

@@ -1,6 +1,5 @@
 package com.lothrazar.potatobread.item;
 
-import java.util.List;
 import com.lothrazar.library.item.ItemFlib;
 import com.lothrazar.library.util.ChatUtil;
 import net.minecraft.network.chat.Component;
@@ -11,9 +10,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.Level;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.api.distmarker.OnlyIn;
+import java.util.function.Consumer;
 
 public class ItemBread extends ItemFlib {
 
@@ -27,7 +28,7 @@ public class ItemBread extends ItemFlib {
 
   @Override
   @OnlyIn(Dist.CLIENT)
-  public void appendHoverText(ItemStack stack, Item.TooltipContext context, List<Component> tooltip, TooltipFlag flagIn) {
+  public void appendHoverText(ItemStack stack, Item.TooltipContext context, TooltipDisplay tooltipDisplay, Consumer<Component> tooltip, TooltipFlag flagIn) {
     BreadToppings top = BreadToppings.fromStack(stack);
     if (top != null) {
       // tooltip.add(new TranslatableComponent(stack.getDescriptionId() + "." + top.toString()).withStyle(ChatFormatting.AQUA));
@@ -39,9 +40,9 @@ public class ItemBread extends ItemFlib {
       if (mobeffectinstance.getDuration() > 20) {
         mutablecomponent = Component.translatable("potion.withDuration", mutablecomponent, MobEffectUtil.formatDuration(mobeffectinstance, 1.0f, 20.0f));
       }
-      tooltip.add(mutablecomponent.withStyle(mobeffectinstance.getEffect().value().getCategory().getTooltipFormatting()));
+      tooltip.accept(mutablecomponent.withStyle(mobeffectinstance.getEffect().value().getCategory().getTooltipFormatting()));
     }
-    super.appendHoverText(stack, context, tooltip, flagIn);
+    super.appendHoverText(stack, context, tooltipDisplay, tooltip, flagIn);
   }
 
   @Override
@@ -53,7 +54,7 @@ public class ItemBread extends ItemFlib {
   public Component getName(ItemStack st) {
     BreadToppings top = BreadToppings.fromStack(st);
     if (top != null) {
-      return Component.translatable(this.getDescriptionId(st) + "." + top.toString());
+      return Component.translatable(this.getDescriptionId() + "." + top.toString());
     }
     return super.getName(st); //  new TranslatableComponent(this.getDescriptionId(st) );
   }

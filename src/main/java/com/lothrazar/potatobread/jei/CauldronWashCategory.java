@@ -3,17 +3,17 @@ package com.lothrazar.potatobread.jei;
 import com.lothrazar.library.registry.RecipeCauldronFactory.CauldronFakeRecipe;
 import com.lothrazar.potatobread.PotatoModMain;
 import mezz.jei.api.gui.builder.IRecipeLayoutBuilder;
+import mezz.jei.api.gui.builder.ITooltipBuilder;
 import mezz.jei.api.gui.drawable.IDrawable;
 import mezz.jei.api.gui.ingredient.IRecipeSlotsView;
 import mezz.jei.api.helpers.IGuiHelper;
-import java.util.List;
 import mezz.jei.api.recipe.IFocusGroup;
 import mezz.jei.api.recipe.RecipeIngredientRole;
 import mezz.jei.api.recipe.RecipeType;
 import mezz.jei.api.recipe.category.IRecipeCategory;
-import net.minecraft.client.gui.GuiGraphics;
+import net.minecraft.client.gui.GuiGraphicsExtractor;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.LayeredCauldronBlock;
@@ -37,7 +37,7 @@ public class CauldronWashCategory implements IRecipeCategory<CauldronFakeRecipe>
     cauldron = new BlockStateDrawable(full, 32, 32);
 
     arrow = guiHelper.createDrawable(
-        ResourceLocation.withDefaultNamespace("textures/gui/container/furnace.png"),
+        Identifier.withDefaultNamespace("textures/gui/container/furnace.png"),
         79, 14, 24, 16);
   }
 
@@ -51,10 +51,14 @@ public class CauldronWashCategory implements IRecipeCategory<CauldronFakeRecipe>
     return Component.translatable("jei." + PotatoModMain.MODID + ".cauldron_wash");
   }
 
-  @SuppressWarnings("removal")
   @Override
-  public IDrawable getBackground() {
-    return background;
+  public int getWidth() {
+    return 116;
+  }
+
+  @Override
+  public int getHeight() {
+    return 36;
   }
 
   @Override
@@ -71,17 +75,16 @@ public class CauldronWashCategory implements IRecipeCategory<CauldronFakeRecipe>
   }
 
   @Override
-  public void draw(CauldronFakeRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphics guiGraphics, double mouseX, double mouseY) {
+  public void draw(CauldronFakeRecipe recipe, IRecipeSlotsView recipeSlotsView, GuiGraphicsExtractor guiGraphics, double mouseX, double mouseY) {
+    background.draw(guiGraphics, 0, 0);
     cauldron.draw(guiGraphics, 24, 4);
     arrow.draw(guiGraphics, 55, 10);
   }
 
-  @SuppressWarnings("removal")
   @Override
-  public List<Component> getTooltipStrings(CauldronFakeRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
+  public void getTooltip(ITooltipBuilder tooltip, CauldronFakeRecipe recipe, IRecipeSlotsView recipeSlotsView, double mouseX, double mouseY) {
     if (mouseX >= 24 && mouseX <= 56 && mouseY >= 4 && mouseY <= 36) {
-      return List.of(Component.translatable("item.potatobread.potato_peeled.tooltip"));
+      tooltip.add(Component.translatable("item.potatobread.potato_peeled.tooltip"));
     }
-    return List.of();
   }
 }

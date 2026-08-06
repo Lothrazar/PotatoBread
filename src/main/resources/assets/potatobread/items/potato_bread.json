@@ -1,0 +1,10 @@
+{
+    "model": {
+        "type": "minecraft:model",
+        "model": "potatobread:item/potato_bread",
+        "tints": [
+            { "type": "minecraft:constant", "value": -1 },
+            { "type": "potatobread:bread_topping" }
+        ]
+    }
+}
