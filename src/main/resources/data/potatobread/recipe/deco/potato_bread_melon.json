@@ -6,15 +6,9 @@
     "ggg"
   ],
   "key": {
-    "g": {
-      "item": "potatobread:potato_bread"
-    },
-    "i": {
-      "tag": "c:icing"
-    },
-    "b": {
-      "item": "minecraft:glistering_melon_slice"
-    }
+    "g": "potatobread:potato_bread",
+    "i": "#c:icing",
+    "b": "minecraft:glistering_melon_slice"
   },
   "result": {
     "id": "potatobread:potato_bread",

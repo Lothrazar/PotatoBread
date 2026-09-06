@@ -1,36 +1,18 @@
 {
-	"type": "minecraft:crafting_shapeless",
-	"ingredients": [
-		{
-			"item": "potatobread:rolling_pin"
-		},
-		{
-			"tag": "c:drinks/milk"
-		},
-		{
-			"tag": "c:starch"
-		},
-		{
-			"item": "minecraft:sugar"
-		},
-		{
-			"item": "minecraft:sugar"
-		},
-		{
-			"item": "minecraft:sugar"
-		},
-		{
-			"item": "minecraft:sugar"
-		},
-		{
-			"item": "minecraft:sugar"
-		},
-		{
-			"item": "minecraft:sugar"
-		}
-	],
-	"result": {
-		"id": "potatobread:icing",
-		"count": 6
-	}
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "potatobread:rolling_pin",
+    "#c:drinks/milk",
+    "#c:starch",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:sugar",
+    "minecraft:sugar"
+  ],
+  "result": {
+    "id": "potatobread:icing",
+    "count": 6
+  }
 }

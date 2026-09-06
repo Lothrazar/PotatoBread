@@ -22,8 +22,8 @@
 			"modid": "cyclic"
 		},
 		{
-			"type": "neoforge:item_exists",
-			"item": "cyclic:crusher"
+			"type": "neoforge:registered",
+			"value": "cyclic:crusher"
 		}
 	]
 }

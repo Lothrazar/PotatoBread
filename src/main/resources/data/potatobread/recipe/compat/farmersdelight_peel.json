@@ -1,13 +1,9 @@
 {
   "type": "farmersdelight:cutting",
   "ingredients": [
-    {
-      "item": "minecraft:potato"
-    }
+    "minecraft:potato"
   ],
-  "tool": {
-    "tag": "neoforge:tools/knives"
-  },
+  "tool": "#neoforge:tools/knives",
   "result": [
     {
       "item": "potatobread:potato_peeled",

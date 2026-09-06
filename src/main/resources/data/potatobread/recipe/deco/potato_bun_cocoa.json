@@ -6,15 +6,9 @@
     "ggg"
   ],
   "key": {
-    "g": {
-      "item": "potatobread:potato_bun"
-    },
-    "i": {
-      "tag": "c:icing"
-    },
-    "b": {
-      "item": "minecraft:cocoa_beans"
-    }
+    "g": "potatobread:potato_bun",
+    "i": "#c:icing",
+    "b": "minecraft:cocoa_beans"
   },
   "result": {
     "id": "potatobread:potato_bun",

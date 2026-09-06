@@ -1,24 +1,12 @@
 {
   "type": "farmersdelight:cooking",
   "ingredients": [
-    {
-      "tag": "c:icing"
-    },
-    {
-      "item": "minecraft:glow_berries"
-    },
-    {
-      "tag": "c:icing"
-    },
-    {
-      "item": "potatobread:potato_roll_raw"
-    },
-    {
-      "item": "potatobread:potato_roll_raw"
-    },
-    {
-      "item": "potatobread:potato_roll_raw"
-    }
+    "#c:icing",
+    "minecraft:glow_berries",
+    "#c:icing",
+    "potatobread:potato_roll_raw",
+    "potatobread:potato_roll_raw",
+    "potatobread:potato_roll_raw"
   ],
   "result": {
     "id": "potatobread:potato_roll",

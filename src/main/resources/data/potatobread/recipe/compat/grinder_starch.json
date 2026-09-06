@@ -13,8 +13,8 @@
 			"modid": "plaingrinder"
 		},
 		{
-			"type": "neoforge:item_exists",
-			"item": "plaingrinder:grinder"
+			"type": "neoforge:registered",
+			"value": "plaingrinder:grinder"
 		}
 	]
 }

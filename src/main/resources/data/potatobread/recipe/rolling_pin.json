@@ -10,7 +10,7 @@
     "p": "#minecraft:planks"
   },
   "result": {
-    "item": "potatobread:rolling_pin",
+    "id": "potatobread:rolling_pin",
     "count": 1
   }
 }

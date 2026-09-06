@@ -6,12 +6,8 @@
     " g "
   ],
   "key": {
-    "j": {
-      "item": "potatobread:rolling_pin"
-    },
-    "g": {
-      "item": "potatobread:dough"
-    }
+    "j": "potatobread:rolling_pin",
+    "g": "potatobread:dough"
   },
   "result": {
     "id": "potatobread:potato_bun_raw",
