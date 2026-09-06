@@ -1,8 +1,6 @@
 {
   "type": "minecraft:smoking",
-  "ingredient": {
-    "item": "potatobread:potato_peeled"
-  },
+  "ingredient": "potatobread:potato_peeled",
   "result": {
     "id": "potatobread:starch"
   },

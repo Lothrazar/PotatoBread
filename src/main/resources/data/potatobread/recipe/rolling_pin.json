@@ -6,12 +6,8 @@
     "s  "
   ],
   "key": {
-    "s": {
-      "item": "minecraft:stick"
-    },
-    "p": {
-      "tag": "minecraft:planks"
-    }
+    "s": "minecraft:stick",
+    "p": "#minecraft:planks"
   },
   "result": {
     "item": "potatobread:rolling_pin",

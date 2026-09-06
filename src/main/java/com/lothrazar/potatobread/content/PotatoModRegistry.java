@@ -20,8 +20,8 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class PotatoModRegistry {
 
-  public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(Registries.ITEM, PotatoModMain.MODID);
-  public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(Registries.BLOCK, PotatoModMain.MODID);
+  public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(PotatoModMain.MODID);
+  public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(PotatoModMain.MODID);
   public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, PotatoModMain.MODID);
   public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PotatoModMain.MODID);
 
@@ -30,26 +30,26 @@ public class PotatoModRegistry {
   public static final FoodProperties GOLDEN_CARROT = (new FoodProperties.Builder()).nutrition(6).saturationModifier(1.2F).build(); // 6, 1.2 GOLDEN_CARROT
   public static final FoodProperties BAKED_POTATO = (new FoodProperties.Builder()).nutrition(5).saturationModifier(0.6F).build(); // 5, 0.6
   //peeled potatoes and 3 ingredients
-  public static final DeferredHolder<Item, ItemRaw> PEELED = ITEMS.register("potato_peeled", () -> new ItemRaw(new Item.Properties().food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.3F).build()), new ItemFlib.Settings().tooltip())); //edible same as raw
-  public static final DeferredHolder<Item, ItemRaw> STARCH = ITEMS.register("starch", () -> new ItemRaw(new Item.Properties(), new ItemFlib.Settings().noTooltip()));
-  public static final DeferredHolder<Item, ItemRaw> DOUGH = ITEMS.register("dough", () -> new ItemRaw(new Item.Properties(), new ItemFlib.Settings().tooltip()));
-  public static final DeferredHolder<Item, ItemRaw> ICING = ITEMS.register("icing", () -> new ItemRaw(new Item.Properties(), new ItemFlib.Settings().tooltip()));
-  //  public static final DeferredHolder<Item, ItemRaw> MAYO = ITEMS.register("mayo", () -> new ItemRaw(new Item.Properties()));
+  public static final DeferredHolder<Item, ItemRaw> PEELED = ITEMS.registerItem("potato_peeled", props -> new ItemRaw(props.food(new FoodProperties.Builder().nutrition(1).saturationModifier(0.3F).build()), new ItemFlib.Settings().tooltip())); //edible same as raw
+  public static final DeferredHolder<Item, ItemRaw> STARCH = ITEMS.registerItem("starch", props -> new ItemRaw(props, new ItemFlib.Settings().noTooltip()));
+  public static final DeferredHolder<Item, ItemRaw> DOUGH = ITEMS.registerItem("dough", props -> new ItemRaw(props, new ItemFlib.Settings().tooltip()));
+  public static final DeferredHolder<Item, ItemRaw> ICING = ITEMS.registerItem("icing", props -> new ItemRaw(props, new ItemFlib.Settings().tooltip()));
+  //  public static final DeferredHolder<Item, ItemRaw> MAYO = ITEMS.registerItem("mayo", props -> new ItemRaw(props));
   //2 tools
-  public static final DeferredHolder<Item, ItemCraftTool> ROLLING_PIN = ITEMS.register("rolling_pin", () -> new ItemCraftTool(new Item.Properties().rarity(Rarity.UNCOMMON)));
-  //  public static final DeferredHolder<Item, ItemCraftTool> PASTRY_KNIFE = ITEMS.register("pastry_knife", () -> new ItemCraftTool(new Item.Properties().rarity(Rarity.UNCOMMON)));
+  public static final DeferredHolder<Item, ItemCraftTool> ROLLING_PIN = ITEMS.registerItem("rolling_pin", props -> new ItemCraftTool(props.rarity(Rarity.UNCOMMON)));
+  //  public static final DeferredHolder<Item, ItemCraftTool> PASTRY_KNIFE = ITEMS.registerItem("pastry_knife", props -> new ItemCraftTool(props.rarity(Rarity.UNCOMMON)));
   // potato_flour
   // potato_flakes // joke cereal
   //FOOD
-  public static final DeferredHolder<Item, ItemRaw> LOAF_RAW = ITEMS.register("potato_loaf_raw", () -> new ItemRaw(new Item.Properties()));
-  public static final DeferredHolder<Item, ItemRaw> BREAD_RAW = ITEMS.register("potato_bread_raw", () -> new ItemRaw(new Item.Properties()));
-  public static final DeferredHolder<Item, ItemRaw> ROLL_RAW = ITEMS.register("potato_roll_raw", () -> new ItemRaw(new Item.Properties()));
-  public static final DeferredHolder<Item, ItemRaw> BUN_RAW = ITEMS.register("potato_bun_raw", () -> new ItemRaw(new Item.Properties()));
+  public static final DeferredHolder<Item, ItemRaw> LOAF_RAW = ITEMS.registerItem("potato_loaf_raw", props -> new ItemRaw(props));
+  public static final DeferredHolder<Item, ItemRaw> BREAD_RAW = ITEMS.registerItem("potato_bread_raw", props -> new ItemRaw(props));
+  public static final DeferredHolder<Item, ItemRaw> ROLL_RAW = ITEMS.registerItem("potato_roll_raw", props -> new ItemRaw(props));
+  public static final DeferredHolder<Item, ItemRaw> BUN_RAW = ITEMS.registerItem("potato_bun_raw", props -> new ItemRaw(props));
   //
-  public static final DeferredHolder<Item, ItemBread> LOAF = ITEMS.register("potato_loaf", () -> new ItemBread(new Item.Properties().food(FOOD_HEAVY_BREAD).rarity(Rarity.UNCOMMON), new ItemFlib.Settings().tooltip()));
-  public static final DeferredHolder<Item, ItemBread> BREAD = ITEMS.register("potato_bread", () -> new ItemBread(new Item.Properties().food(BAKED_POTATO)));
-  public static final DeferredHolder<Item, ItemBread> ROLL = ITEMS.register("potato_roll", () -> new ItemBread(new Item.Properties().food(BAKED_POTATO)));
-  public static final DeferredHolder<Item, ItemBread> BUN = ITEMS.register("potato_bun", () -> new ItemBread(new Item.Properties().food(BAKED_POTATO)));
+  public static final DeferredHolder<Item, ItemBread> LOAF = ITEMS.registerItem("potato_loaf", props -> new ItemBread(props.food(FOOD_HEAVY_BREAD).rarity(Rarity.UNCOMMON), new ItemFlib.Settings().tooltip()));
+  public static final DeferredHolder<Item, ItemBread> BREAD = ITEMS.registerItem("potato_bread", props -> new ItemBread(props.food(BAKED_POTATO)));
+  public static final DeferredHolder<Item, ItemBread> ROLL = ITEMS.registerItem("potato_roll", props -> new ItemBread(props.food(BAKED_POTATO)));
+  public static final DeferredHolder<Item, ItemBread> BUN = ITEMS.registerItem("potato_bun", props -> new ItemBread(props.food(BAKED_POTATO)));
   //BREADMAKER BLOCK!?!?
 
   public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB = TABS.register("tab", () ->
